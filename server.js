@@ -98,3 +98,9 @@ app.post("/api/incendios", async (req, res) => {
 app.listen(port, () => {
   console.log(`Servidor corriendo en http://localhost:${port}`);
 });
+
+app.get("/", (req, res) => {
+  res.send(
+    "Bienvenido a la API de Incendios Forestales. Usa /api/incendios para ver los datos."
+  );
+});
